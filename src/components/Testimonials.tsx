@@ -7,7 +7,7 @@ const testimonials = [
     name: "Carla Mendes",
     role: "Consultora de Vendas",
     image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+      "https://i.imgur.com/VkyOG7I.png",
     text: "Sempre achei que precisava de anos de experiência para me destacar na minha área. Mari Batista mudou completamente minha visão! Em poucas horas, aprendi estratégias que apliquei e consegui ter reconhecimento no trabalho!",
     featured: true,
     size: "small",
@@ -16,7 +16,7 @@ const testimonials = [
     name: "Rafael Souza",
     role: "Analista Comercial",
     image:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+      "https://i.imgur.com/W5G86jw.png",
     text: "Já fiz vários cursos online, mas nenhum me trouxe tanto resultado em tão pouco tempo como esse. O conteúdo é direto ao ponto e aplicável. Depois do curso, fechei minha primeira grande venda usando técnicas que aprendi aqui!",
     size: "small",
   },
@@ -24,7 +24,7 @@ const testimonials = [
     name: "Fernanda Oliveira",
     role: "Empreendedora",
     image:
-      "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+      "https://i.imgur.com/dC7HD49.png",
     text: "Antes do curso, eu tinha muitas inseguranças sobre como me posicionar no mercado. Agora, me sinto muito mais confiante para vender meus serviços e me comunicar com clientes. A Mari ensina de um jeito leve e envolvente.",
     size: "small",
   },
@@ -32,7 +32,7 @@ const testimonials = [
     name: "Lucas Martins",
     role: "Estudante e futuro profissional",
     image:
-      "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rgb-1.2.1&auto=format&fit=crop&w=500&q=80",
+      "https://i.imgur.com/8RcA3eI.png",
     text: "Sempre tive medo de entrar no mercado de trabalho sem experiência. O curso me mostrou que o mais importante é ter as estratégias certas. Agora sei como me destacar nas entrevistas e já até recebi propostas para estágio!",
     featured: true,
     size: "small",
@@ -41,7 +41,7 @@ const testimonials = [
     name: "Camila Batista",
     role: "Gestora Comercial",
     image:
-      "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rgb-1.2.1&auto=format&fit=crop&w=500&q=80",
+      "https://i.imgur.com/KQKULKK.png",
     text: "A palestra da Mari Batista foi transformadora! Com uma abordagem dinâmica e conteúdo altamente relevante, ela conseguiu prender a atenção do público do início ao fim. Saímos não apenas motivados, mas com insights.",
     featured: true,
     size: "small",
