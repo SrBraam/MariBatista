@@ -87,7 +87,7 @@ export default function Testimonials() {
               >
                 <div className="absolute inset-0 bg-[#D4AF37] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0"></div>
                 <div className="relative z-10 h-full flex flex-col">
-                  <Quote className="w-8 h-8 text-[#D4AF37] mb-4 opacity-50 group-hover:text-[#1D1E22] group-hover:opacity-100 transition-all duration-300" />
+                  <Quote className="w-8 h-8 text-[#D4AF37] mb-4 opacity-50 group-hover:text-[#1D1E22] group-hover:opacity-100 transition-all duration-300 transform rotate-180" />
                   <p
                     className={`text-gray-300 mb-6 group-hover:text-[#1D1E22] transition-all duration-300
                     ${isLarge ? "text-lg" : "text-base"}
