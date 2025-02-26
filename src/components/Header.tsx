@@ -25,7 +25,7 @@ export default function Header() {
             <Link to="/" className="flex items-center" onClick={closeMenu}>
               {/* Replace "MB" with the logo image */}
               <img
-                src="https://i.imgur.com/OumiXA3.png"
+                src="https://i.imgur.com/jpAdTDU.png"
                 alt="Logo"
                 className="h-12 w-auto" // Adjust size as needed
               />
