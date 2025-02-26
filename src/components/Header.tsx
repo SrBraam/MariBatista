@@ -66,8 +66,7 @@ export default function Header() {
             </Link>
             <a
               href="https://wa.me/+5571987835827"
-              className="ml-6 inline-flex items-center justify-center px-6 py-3 rounded-md text-[#1D1E22] transition-all duration-300 transform hover:scale-105 shadow-lg font-semibold focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:ring-offset-2"
-              style={{ background: "#D4AF37" }}
+              className="ml-6 inline-flex items-center justify-center px-6 py-3 rounded-md text-[#D4AF37] border-2 border-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#1D1E22] shadow-lg transition-all duration-300 transform hover:scale-105 font-semibold focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:ring-offset-2"
             >
               Fale Conosco
             </a>
@@ -142,8 +141,7 @@ export default function Header() {
               <a
                 href="https://wa.me/+5571987835827"
                 onClick={closeMenu}
-                className="block px-3 py-2 rounded-md text-base font-medium text-[#1D1E22] transition-all duration-300 transform hover:scale-105 shadow-lg font-semibold focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:ring-offset-2"
-                style={{ background: "#D4AF37" }}
+                className="block px-3 py-2 rounded-md text-base font-medium text-[#D4AF37] border-2 border-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#1D1E22] shadow-lg transition-all duration-300 transform hover:scale-105 font-semibold focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:ring-offset-2"
               >
                 Fale Conosco
               </a>
