@@ -23,6 +23,7 @@ import AdminCourses from "./pages/admin/Courses";
 import AdminLectures from "./pages/admin/Lectures";
 import AdminPublications from "./pages/admin/Publications";
 import Clients from "./pages/admin/Clients";
+import { SpeedInsights } from "@vercel/speed-insights/react"; // Add this import
 
 const routes = [
   { path: "/", element: <Home /> },
@@ -88,7 +89,8 @@ function App() {
   return (
     <Router>
       <AppRoutes />
-      <Analytics /> {/* Add this line */}
+      <Analytics />
+      <SpeedInsights /> {/* Add this component */}
     </Router>
   );
 }
