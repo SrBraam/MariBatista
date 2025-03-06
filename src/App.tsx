@@ -48,9 +48,6 @@ const routes = [
 ];
 
 function AppRoutes() {
-  // Handle Tempo routes
-  const tempoRoutes = import.meta.env.VITE_TEMPO ? useRoutes(routes) : null;
-
   return (
     <div
       className="font-[Montserrat] relative min-h-screen"
@@ -59,13 +56,9 @@ function AppRoutes() {
           "linear-gradient(135deg, rgba(13, 13, 16, 1) 0%, rgba(26, 26, 32, 1) 25%, rgba(19, 19, 26, 1) 50%, rgba(32, 32, 38, 1) 75%, rgba(16, 16, 22, 1) 100%), radial-gradient(circle at center, rgba(255, 215, 0, 0.05) 0%, rgba(255, 215, 0, 0) 70%)",
       }}
     >
-      {/* Overlay with Subtle Glow */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(255,215,0,0.1)_0%,_transparent_70%)] mix-blend-overlay"></div>
-
-      {/* Content */}
       <div className="relative z-10">
         <Header />
-        {tempoRoutes}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/biografia" element={<Biography />} />
@@ -75,9 +68,6 @@ function AppRoutes() {
           <Route path="/publicacoes" element={<Publications />} />
           <Route path="/politica-de-privacidade" element={<PrivacyPolicy />} />
           <Route path="/termos-de-servico" element={<Terms />} />
-          {import.meta.env.VITE_TEMPO && <Route path="/tempobook/*" />}
-
-          {/* Admin Routes */}
           <Route path="/admin/login" element={<Login />} />
           <Route path="/admin" element={<DashboardLayout />}>
             <Route index element={<Dashboard />} />
