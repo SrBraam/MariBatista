@@ -1,15 +1,14 @@
-import React from "react";
 import {
   BrowserRouter as Router,
   Routes,
   Route,
   useRoutes,
 } from "react-router-dom";
-import routes from "tempo-routes";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Biography from "./pages/Biography";
+import { Analytics } from "@vercel/analytics/react";
 import Training from "./pages/Training";
 import Registration from "./pages/Registration";
 import Lectures from "./pages/Lectures";
@@ -24,6 +23,29 @@ import AdminCourses from "./pages/admin/Courses";
 import AdminLectures from "./pages/admin/Lectures";
 import AdminPublications from "./pages/admin/Publications";
 import Clients from "./pages/admin/Clients";
+
+const routes = [
+  { path: "/", element: <Home /> },
+  { path: "/biografia", element: <Biography /> },
+  { path: "/treinamentos", element: <Training /> },
+  { path: "/inscricoes", element: <Registration /> },
+  { path: "/palestras", element: <Lectures /> },
+  { path: "/publicacoes", element: <Publications /> },
+  { path: "/politica-de-privacidade", element: <PrivacyPolicy /> },
+  { path: "/termos-de-servico", element: <Terms /> },
+  { path: "/admin/login", element: <Login /> },
+  {
+    path: "/admin",
+    element: <DashboardLayout />,
+    children: [
+      { index: true, element: <Dashboard /> },
+      { path: "clients", element: <Clients /> },
+      { path: "courses", element: <AdminCourses /> },
+      { path: "lectures", element: <AdminLectures /> },
+      { path: "publications", element: <AdminPublications /> },
+    ],
+  },
+];
 
 function AppRoutes() {
   // Handle Tempo routes
@@ -76,6 +98,7 @@ function App() {
   return (
     <Router>
       <AppRoutes />
+      <Analytics /> {/* Add this line */}
     </Router>
   );
 }
