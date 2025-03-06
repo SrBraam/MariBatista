@@ -6,7 +6,6 @@ import {
   useRoutes,
 } from "react-router-dom";
 import routes from "tempo-routes";
-import { Analytics } from "@vercel/analytics/react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -77,7 +76,6 @@ function App() {
   return (
     <Router>
       <AppRoutes />
-      <Analytics />
     </Router>
   );
 }
