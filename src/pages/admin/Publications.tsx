@@ -23,7 +23,7 @@ interface Publication {
   link: string;
 }
 
-export default function Publications() {
+export default function AdminPublications() {
   const [publications, setPublications] = React.useState<Publication[]>([]);
   const [isLoading, setIsLoading] = React.useState(true);
   const [isEditing, setIsEditing] = React.useState(false);
@@ -33,7 +33,11 @@ export default function Publications() {
 
   const fetchPublications = async () => {
     setIsLoading(true);
-    const { data, error } = await supabase.from("publications").select("*");
+    const { data, error } = await supabase
+      .from("publications")
+      .select("*")
+      .order('created_at', { ascending: false });
+
     if (error) {
       console.error("Error fetching publications:", error);
       setPublications([]);
@@ -59,6 +63,7 @@ export default function Publications() {
       content: formData.get("content") as string,
       image_url: formData.get("image_url") as string,
       link: formData.get("link") as string || null,
+      created_at: new Date().toISOString(),
     };
 
     try {
