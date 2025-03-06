@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { BookOpen, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { supabase } from "../lib/supabase";
 
 interface Publication {
@@ -11,6 +11,7 @@ interface Publication {
   content: string;
   image_url: string;
   link: string;
+  created_at: string; // Add this field
 }
 
 export default function Publications() {
@@ -19,7 +20,11 @@ export default function Publications() {
 
   React.useEffect(() => {
     const fetchPublications = async () => {
-      const { data, error } = await supabase.from("publications").select("*");
+      const { data, error } = await supabase
+        .from("publications")
+        .select("*")
+        .order('created_at', { ascending: false }); // Add this line to sort by creation date
+
       if (error) console.error("Error fetching publications:", error);
       else setPublications(data || []);
       setIsLoading(false);
