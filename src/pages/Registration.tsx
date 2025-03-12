@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { CheckSquare, Square, AlertCircle, CheckCircle, X, ChevronDown, ChevronUp } from "lucide-react";
+import { CheckSquare, Square, AlertCircle, CheckCircle, X, ChevronDown, ChevronUp, Copy } from "lucide-react";
 import { supabase } from "../lib/supabase";
 
 interface Course {
@@ -111,7 +111,6 @@ export default function Registration() {
     const form = e.currentTarget;
     const formData = new FormData(form);
     const totalPrice = calculatePrice();
-
     try {
       const { error } = await supabase.from("registrations").insert([
         {
@@ -145,6 +144,14 @@ export default function Registration() {
     setToast(null);
   };
 
+  const copyToClipboard = (text: string) => {
+    navigator.clipboard.writeText(text).then(() => {
+      alert("Texto copiado para a área de transferência!");
+    }).catch((err) => {
+      console.error("Falha ao copiar texto: ", err);
+    });
+  };
+
   return (
     <section className="py-12 lg:py-24">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -157,7 +164,6 @@ export default function Registration() {
           <h1 className="text-3xl sm:text-4xl font-bold text-white mb-6 sm:mb-8 text-center">
             Inscrições
           </h1>
-
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label htmlFor="name" className="block text-sm sm:text-base font-medium text-gray-300">
@@ -328,7 +334,6 @@ export default function Registration() {
           </form>
         </motion.div>
       </div>
-
       {/* Enhanced Toast Notification */}
       <AnimatePresence>
         {toast && (
@@ -369,7 +374,6 @@ export default function Registration() {
                     <X className="w-5 h-5" />
                   </motion.button>
                 </div>
-                
                 {toast.type === "payment" && (
                   <div className="mt-3 space-y-3">
                     <div className="flex justify-center">
@@ -379,6 +383,12 @@ export default function Registration() {
                         className="w-32 h-32 rounded-lg border border-[#1D1E22]"
                       />
                     </div>
+                    <button
+                      onClick={() => copyToClipboard("00020126560014br.gov.bcb.pix0134maribatista.treinamentos@gmail.com5204000053039865802BR5925MARIANA NASCIMENTO BATIST6008SALVADOR62070503***6304B015")}
+                      className="w-full py-2 px-4 bg-[#D4AF37] text-[#1D1E22] rounded-md text-sm font-semibold hover:bg-[#C09B30] transition-colors duration-300 flex items-center justify-center"
+                    >
+                      <Copy className="w-4 h-4 inline-block mr-2" /> Copiar Chave PIX
+                    </button>
                     <div className="text-sm text-gray-200 space-y-2">
                       <p>1. Escaneie o QR code acima com o app do seu banco</p>
                       <p>
@@ -438,11 +448,9 @@ const styles = `
     background: #D4AF37;
     border-radius: 9999px;
   }
-
   .toast-container {
     animation: slideIn 0.3s ease-out;
   }
-
   @keyframes slideIn {
     from {
       transform: translateY(50px);
@@ -454,6 +462,5 @@ const styles = `
     }
   }
 `;
-
 // Add this to your CSS file (e.g., globals.css) or within a <style> tag:
 <style>{styles}</style>
