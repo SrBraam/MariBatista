@@ -7,7 +7,7 @@ const plans = [
     icon: Star,
     name: "Carreira Inicial",
     price: "R$ 50,00",
-    originalPrice: "R$ 65,00",
+    originalPrice: "R$ 60,00",
     description: "Comece sua jornada de transformação profissional",
     features: [
       "1 curso estratégico",
@@ -19,9 +19,9 @@ const plans = [
   {
     icon: Rocket,
     name: "Acelerar Profissão",
-    price: "R$ 135,00",
-    originalPrice: "R$ 150,00",
-    description: "(R$ 45,00 por curso – 10% de desconto)",
+    price: "R$ 150,00",
+    originalPrice: "R$ 180,00",
+    description: "(R$ 50,00 por curso – 20% de desconto)",
     features: [
       "3 cursos estratégicos",
       "Acesso vitalício",
@@ -32,9 +32,9 @@ const plans = [
   {
     icon: Crown,
     name: "Transformação Total",
-    price: "R$ 340,00",
-    originalPrice: "R$ 400,00",
-    description: "(R$ 42,50 por curso – 15% de desconto)",
+    price: "R$ 400,00",
+    originalPrice: "R$ 480,00",
+    description: "(R$ 50,00 por curso – 20% de desconto)",
     features: [
       "8 cursos estratégicos",
       "Acesso vitalício",
@@ -45,9 +45,9 @@ const plans = [
   {
     icon: Sparkles,
     name: "Corporativo",
-    price: "R$ 600,00",
-    originalPrice: "R$ 750,00 ",
-    description: "(R$ 40,00 por curso – 20% de desconto)",
+    price: "R$ 750,00",
+    originalPrice: "R$ 900,00 ",
+    description: "(R$ 50,00 por curso – 20% de desconto)",
     features: [
       "15 cursos estratégicos",
       "Acesso vitalício",
