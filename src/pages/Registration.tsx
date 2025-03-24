@@ -75,35 +75,9 @@ export default function Registration() {
   };
 
   const calculatePrice = () => {
-    let price = 0;
-    switch (selectedCourses.length) {
-      case 0:
-        price = 0;
-        break;
-      case 1:
-      case 2:
-        price = selectedCourses.length * 50;
-        break;
-      case 3:
-      case 4:
-      case 5:
-      case 6:
-      case 7:
-        price = selectedCourses.length * 45;
-        break;
-      case 8:
-      case 9:
-      case 10:
-      case 11:
-      case 12:
-      case 13:
-      case 14:
-        price = selectedCourses.length * 42.5;
-        break;
-      default:
-        price = selectedCourses.length * 40;
-    }
-    return `R$ ${price.toFixed(2)}`;
+    const pricePerCourse = 50; // Fixed price per course
+    const totalPrice = selectedCourses.length * pricePerCourse;
+    return `R$ ${totalPrice.toFixed(2)}`;
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
